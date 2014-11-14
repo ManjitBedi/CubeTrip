@@ -15,16 +15,15 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.dae")!
+        let scene = SCNScene()
         
         // create and add a camera to the scene
         let cameraNode = SCNNode()
         cameraNode.camera = SCNCamera()
         scene.rootNode.addChildNode(cameraNode)
         
-        // place the camera
-        cameraNode.position = SCNVector3(x: 0, y: 0, z: 15)
+        // place the camera a bit back from the cubes
+        cameraNode.position = SCNVector3(x: 0, y: 0, z: 90)
         
         // create and add a light to the scene
         let lightNode = SCNNode()
@@ -40,12 +39,6 @@ class GameViewController: UIViewController {
         ambientLightNode.light!.color = UIColor.darkGrayColor()
         scene.rootNode.addChildNode(ambientLightNode)
         
-        // retrieve the ship node
-        let ship = scene.rootNode.childNodeWithName("ship", recursively: true)!
-        
-        // animate the 3d object
-        ship.runAction(SCNAction.repeatActionForever(SCNAction.rotateByX(0, y: 2, z: 0, duration: 1)))
-        
         // retrieve the SCNView
         let scnView = self.view as SCNView
         
@@ -59,53 +52,12 @@ class GameViewController: UIViewController {
         scnView.showsStatistics = true
         
         // configure the view
-        scnView.backgroundColor = UIColor.blackColor()
+        scnView.backgroundColor = UIColor.blueColor()
         
-        // add a tap gesture recognizer
-        let tapGesture = UITapGestureRecognizer(target: self, action: "handleTap:")
-        let gestureRecognizers = NSMutableArray()
-        gestureRecognizers.addObject(tapGesture)
-        if let existingGestureRecognizers = scnView.gestureRecognizers {
-            gestureRecognizers.addObjectsFromArray(existingGestureRecognizers)
-        }
-        scnView.gestureRecognizers = gestureRecognizers
+        // create the cubes
+        self.createCubes(scene)
     }
     
-    func handleTap(gestureRecognize: UIGestureRecognizer) {
-        // retrieve the SCNView
-        let scnView = self.view as SCNView
-        
-        // check what nodes are tapped
-        let p = gestureRecognize.locationInView(scnView)
-        if let hitResults = scnView.hitTest(p, options: nil) {
-            // check that we clicked on at least one object
-            if hitResults.count > 0 {
-                // retrieved the first clicked object
-                let result: AnyObject! = hitResults[0]
-                
-                // get its material
-                let material = result.node!.geometry!.firstMaterial!
-                
-                // highlight it
-                SCNTransaction.begin()
-                SCNTransaction.setAnimationDuration(0.5)
-                
-                // on completion - unhighlight
-                SCNTransaction.setCompletionBlock {
-                    SCNTransaction.begin()
-                    SCNTransaction.setAnimationDuration(0.5)
-                    
-                    material.emission.contents = UIColor.blackColor()
-                    
-                    SCNTransaction.commit()
-                }
-                
-                material.emission.contents = UIColor.redColor()
-                
-                SCNTransaction.commit()
-            }
-        }
-    }
     
     override func shouldAutorotate() -> Bool {
         return true
@@ -128,4 +80,54 @@ class GameViewController: UIViewController {
         // Release any cached data, images, etc that aren't in use.
     }
 
+    // This code works but it needs more work to space and align the nodes properly.
+    func createCubes(scene: SCNScene) {
+        
+        var boxSize : CGFloat = 2.0;
+        var numShapes = 5
+        
+        let myBox = SCNBox(width: boxSize, height: boxSize, length: 0.2, chamferRadius: 0)
+        var distanceFromOrigin : Float = (Float)((boxSize*6*5)/2)
+        
+        for count in 1...6 {
+            var nodeCollection = SCNNode()
+            
+            switch count {
+                
+            case 1:
+                nodeCollection.position = SCNVector3(x:  0, y:  0, z: -distanceFromOrigin)
+                
+            case 2:
+                nodeCollection.position = SCNVector3(x:  0, y:  0, z: distanceFromOrigin)
+                
+            // need to rotate
+            case 3:
+                nodeCollection.position = SCNVector3(x: -distanceFromOrigin, y:  0, z:  0)
+                nodeCollection.rotation = SCNVector4(x: 0, y: 1, z: 0, w: Float(M_PI_2))
+                
+            case 4:
+                nodeCollection.position = SCNVector3(x: distanceFromOrigin, y:  0, z:  0)
+                nodeCollection.rotation = SCNVector4(x: 0, y: 1, z: 0, w: Float(M_PI_2))
+                
+            case 5:
+                nodeCollection.position = SCNVector3(x:  0, y: -distanceFromOrigin, z:  0)
+                nodeCollection.rotation = SCNVector4(x: 1, y: 0, z: 0, w: Float(M_PI_2))
+                
+            default:
+                nodeCollection.position = SCNVector3(x:  0, y:  distanceFromOrigin, z:  0)
+                nodeCollection.rotation = SCNVector4(x: 1, y: 0, z: 0, w: Float(M_PI_2))
+            }
+            
+            for x in 1...numShapes{
+                for y in 1...numShapes {
+                    let node = SCNNode(geometry: myBox)
+                    var offset: Int8 = (Int8)(-distanceFromOrigin)
+                    node.position = SCNVector3(x: Float(offset + x*6), y: Float(offset + y*6), z:0)
+                    nodeCollection.addChildNode(node)
+                }
+            }
+            
+            scene.rootNode.addChildNode(nodeCollection)
+        }
+    }
 }

@@ -14,6 +14,7 @@
 		786A46EF1A156AB100DDB37C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 786A46EE1A156AB100DDB37C /* Images.xcassets */; };
 		786A46F21A156AB100DDB37C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786A46F01A156AB100DDB37C /* LaunchScreen.xib */; };
 		786A46FE1A156AB200DDB37C /* CubeTripTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786A46FD1A156AB200DDB37C /* CubeTripTests.swift */; };
+		786A47081A156B5E00DDB37C /* design.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 786A47071A156B5E00DDB37C /* design.rtf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		786A46F71A156AB200DDB37C /* CubeTripTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CubeTripTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		786A46FC1A156AB200DDB37C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		786A46FD1A156AB200DDB37C /* CubeTripTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubeTripTests.swift; sourceTree = "<group>"; };
+		786A47071A156B5E00DDB37C /* design.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = design.rtf; path = CubeTrip/design.rtf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		786A46D71A156AB100DDB37C = {
 			isa = PBXGroup;
 			children = (
+				786A47071A156B5E00DDB37C /* design.rtf */,
 				786A46E21A156AB100DDB37C /* CubeTrip */,
 				786A46FA1A156AB200DDB37C /* CubeTripTests */,
 				786A46E11A156AB100DDB37C /* Products */,
@@ -197,6 +200,7 @@
 			files = (
 				786A46F21A156AB100DDB37C /* LaunchScreen.xib in Resources */,
 				786A46EF1A156AB100DDB37C /* Images.xcassets in Resources */,
+				786A47081A156B5E00DDB37C /* design.rtf in Resources */,
 				786A46E81A156AB100DDB37C /* art.scnassets in Resources */,
 				786A46ED1A156AB100DDB37C /* Main.storyboard in Resources */,
 			);
@@ -411,6 +415,7 @@
 				786A47031A156AB200DDB37C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		786A47041A156AB200DDB37C /* Build configuration list for PBXNativeTarget "CubeTripTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +424,7 @@
 				786A47061A156AB200DDB37C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
