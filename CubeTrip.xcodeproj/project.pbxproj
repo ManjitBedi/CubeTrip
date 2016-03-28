@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		780F31EA1A186DC000B686F0 /* cubes.dae in Resources */ = {isa = PBXBuildFile; fileRef = 780F31E91A186DC000B686F0 /* cubes.dae */; };
+		781E49DA1CA8DD49003F1714 /* 0056.png in Resources */ = {isa = PBXBuildFile; fileRef = 781E49D91CA8DD49003F1714 /* 0056.png */; };
 		786A46E61A156AB100DDB37C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786A46E51A156AB100DDB37C /* AppDelegate.swift */; };
 		786A46EA1A156AB100DDB37C /* CubesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786A46E91A156AB100DDB37C /* CubesViewController.swift */; };
 		786A46ED1A156AB100DDB37C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 786A46EB1A156AB100DDB37C /* Main.storyboard */; };
@@ -19,11 +20,13 @@
 		78739BD61CA794C10051A5FD /* Spheres.scn in Resources */ = {isa = PBXBuildFile; fileRef = 78739BD51CA794C10051A5FD /* Spheres.scn */; };
 		78739BD81CA794DB0051A5FD /* TextExperiment.sks in Resources */ = {isa = PBXBuildFile; fileRef = 78739BD71CA794DB0051A5FD /* TextExperiment.sks */; };
 		78739BDA1CA796100051A5FD /* ExperimentScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78739BD91CA796100051A5FD /* ExperimentScene.swift */; };
+		78C3BB0E1CA8C76F00A34569 /* waves.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 78C3BB0D1CA8C76F00A34569 /* waves.fsh */; };
 		78E7D53B1CA8BE6C00C635C9 /* Experiment.sks in Resources */ = {isa = PBXBuildFile; fileRef = 78E7D53A1CA8BE6C00C635C9 /* Experiment.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		780F31E91A186DC000B686F0 /* cubes.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = cubes.dae; path = CubeTrip/cubes.dae; sourceTree = "<group>"; };
+		781E49D91CA8DD49003F1714 /* 0056.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0056.png; sourceTree = "<group>"; };
 		786A46E01A156AB100DDB37C /* CubeTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CubeTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		786A46E41A156AB100DDB37C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		786A46E51A156AB100DDB37C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +40,7 @@
 		78739BD51CA794C10051A5FD /* Spheres.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Spheres.scn; sourceTree = "<group>"; };
 		78739BD71CA794DB0051A5FD /* TextExperiment.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TextExperiment.sks; sourceTree = "<group>"; };
 		78739BD91CA796100051A5FD /* ExperimentScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperimentScene.swift; sourceTree = "<group>"; };
+		78C3BB0D1CA8C76F00A34569 /* waves.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = waves.fsh; sourceTree = "<group>"; };
 		78E7D53A1CA8BE6C00C635C9 /* Experiment.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Experiment.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +79,7 @@
 				78739BDC1CA7965F0051A5FD /* Spheres */,
 				78739BDB1CA796440051A5FD /* Text Experiment */,
 				786A46E51A156AB100DDB37C /* AppDelegate.swift */,
+				781E49D91CA8DD49003F1714 /* 0056.png */,
 				786A46E91A156AB100DDB37C /* CubesViewController.swift */,
 				786A46EB1A156AB100DDB37C /* Main.storyboard */,
 				786A46EE1A156AB100DDB37C /* Images.xcassets */,
@@ -95,6 +100,7 @@
 		78739BDB1CA796440051A5FD /* Text Experiment */ = {
 			isa = PBXGroup;
 			children = (
+				78C3BB0D1CA8C76F00A34569 /* waves.fsh */,
 				78739BD31CA78EDC0051A5FD /* SpriteKitViewController.swift */,
 				78739BD91CA796100051A5FD /* ExperimentScene.swift */,
 				78E7D53A1CA8BE6C00C635C9 /* Experiment.sks */,
@@ -173,6 +179,8 @@
 			files = (
 				786A46F21A156AB100DDB37C /* LaunchScreen.xib in Resources */,
 				78739BD61CA794C10051A5FD /* Spheres.scn in Resources */,
+				781E49DA1CA8DD49003F1714 /* 0056.png in Resources */,
+				78C3BB0E1CA8C76F00A34569 /* waves.fsh in Resources */,
 				786A46EF1A156AB100DDB37C /* Images.xcassets in Resources */,
 				786A47081A156B5E00DDB37C /* design.rtf in Resources */,
 				780F31EA1A186DC000B686F0 /* cubes.dae in Resources */,

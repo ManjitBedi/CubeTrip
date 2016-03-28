@@ -7,16 +7,32 @@
 //
 
 import UIKit
+import SceneKit
 
 class SpheresViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // create a new scene
+        let scene = SCNScene(named: "Spheres.scn")!
         
+        // retrieve the SCNView
+        let scnView = self.view as! SCNView
         
+        // set the scene to the view
+        scnView.scene = scene
+        
+        // allows the user to manipulate the camera
+        scnView.allowsCameraControl = true
+        
+        // show statistics such as fps and timing information
+        scnView.showsStatistics = true
+        
+        // configure the view
+        scnView.backgroundColor = UIColor.blackColor()
     }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
