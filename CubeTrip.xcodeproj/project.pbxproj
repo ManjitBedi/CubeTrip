@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		780F31EA1A186DC000B686F0 /* cubes.dae in Resources */ = {isa = PBXBuildFile; fileRef = 780F31E91A186DC000B686F0 /* cubes.dae */; };
-		781E49DA1CA8DD49003F1714 /* 0056.png in Resources */ = {isa = PBXBuildFile; fileRef = 781E49D91CA8DD49003F1714 /* 0056.png */; };
+		780F31EA1A186DC000B686F0 /* cubes.dae in Resources */ = {isa = PBXBuildFile; fileRef = 780F31E91A186DC000B686F0 /* cubes.dae */; settings = {ATTRIBUTES = ("--compress", ); }; };
 		786A46E61A156AB100DDB37C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786A46E51A156AB100DDB37C /* AppDelegate.swift */; };
 		786A46EA1A156AB100DDB37C /* CubesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786A46E91A156AB100DDB37C /* CubesViewController.swift */; };
 		786A46ED1A156AB100DDB37C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 786A46EB1A156AB100DDB37C /* Main.storyboard */; };
 		786A46EF1A156AB100DDB37C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 786A46EE1A156AB100DDB37C /* Images.xcassets */; };
 		786A46F21A156AB100DDB37C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786A46F01A156AB100DDB37C /* LaunchScreen.xib */; };
-		786A47081A156B5E00DDB37C /* design.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 786A47071A156B5E00DDB37C /* design.rtf */; };
+		786F03E21CAB7FAE0048FC56 /* stars.png in Resources */ = {isa = PBXBuildFile; fileRef = 786F03E11CAB7FAE0048FC56 /* stars.png */; };
+		786F03E41CAB7FB30048FC56 /* grid_1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 786F03E31CAB7FB30048FC56 /* grid_1024.png */; };
 		78739BD21CA78EB40051A5FD /* SpheresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78739BD11CA78EB40051A5FD /* SpheresViewController.swift */; };
 		78739BD41CA78EDC0051A5FD /* SpriteKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78739BD31CA78EDC0051A5FD /* SpriteKitViewController.swift */; };
 		78739BD61CA794C10051A5FD /* Spheres.scn in Resources */ = {isa = PBXBuildFile; fileRef = 78739BD51CA794C10051A5FD /* Spheres.scn */; };
@@ -25,8 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		780F31E91A186DC000B686F0 /* cubes.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = cubes.dae; path = CubeTrip/cubes.dae; sourceTree = "<group>"; };
-		781E49D91CA8DD49003F1714 /* 0056.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0056.png; sourceTree = "<group>"; };
+		780F31E91A186DC000B686F0 /* cubes.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = cubes.dae; sourceTree = "<group>"; };
 		786A46E01A156AB100DDB37C /* CubeTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CubeTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		786A46E41A156AB100DDB37C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		786A46E51A156AB100DDB37C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -34,7 +33,9 @@
 		786A46EC1A156AB100DDB37C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		786A46EE1A156AB100DDB37C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		786A46F11A156AB100DDB37C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		786A47071A156B5E00DDB37C /* design.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = design.rtf; path = CubeTrip/design.rtf; sourceTree = "<group>"; };
+		786F03E11CAB7FAE0048FC56 /* stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stars.png; path = stuff.atlas/stars.png; sourceTree = "<group>"; };
+		786F03E31CAB7FB30048FC56 /* grid_1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = grid_1024.png; path = stuff.atlas/grid_1024.png; sourceTree = "<group>"; };
+		7870808A1CB0E52F004B9DC7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		78739BD11CA78EB40051A5FD /* SpheresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpheresViewController.swift; sourceTree = "<group>"; };
 		78739BD31CA78EDC0051A5FD /* SpriteKitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteKitViewController.swift; sourceTree = "<group>"; };
 		78739BD51CA794C10051A5FD /* Spheres.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Spheres.scn; sourceTree = "<group>"; };
@@ -58,8 +59,7 @@
 		786A46D71A156AB100DDB37C = {
 			isa = PBXGroup;
 			children = (
-				780F31E91A186DC000B686F0 /* cubes.dae */,
-				786A47071A156B5E00DDB37C /* design.rtf */,
+				7870808A1CB0E52F004B9DC7 /* README.md */,
 				786A46E21A156AB100DDB37C /* CubeTrip */,
 				786A46E11A156AB100DDB37C /* Products */,
 			);
@@ -76,11 +76,10 @@
 		786A46E21A156AB100DDB37C /* CubeTrip */ = {
 			isa = PBXGroup;
 			children = (
+				787080891CB0E507004B9DC7 /* Cubes & Squares */,
 				78739BDC1CA7965F0051A5FD /* Spheres */,
 				78739BDB1CA796440051A5FD /* Text Experiment */,
 				786A46E51A156AB100DDB37C /* AppDelegate.swift */,
-				781E49D91CA8DD49003F1714 /* 0056.png */,
-				786A46E91A156AB100DDB37C /* CubesViewController.swift */,
 				786A46EB1A156AB100DDB37C /* Main.storyboard */,
 				786A46EE1A156AB100DDB37C /* Images.xcassets */,
 				786A46F01A156AB100DDB37C /* LaunchScreen.xib */,
@@ -95,6 +94,15 @@
 				786A46E41A156AB100DDB37C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		787080891CB0E507004B9DC7 /* Cubes & Squares */ = {
+			isa = PBXGroup;
+			children = (
+				780F31E91A186DC000B686F0 /* cubes.dae */,
+				786A46E91A156AB100DDB37C /* CubesViewController.swift */,
+			);
+			name = "Cubes & Squares";
 			sourceTree = "<group>";
 		};
 		78739BDB1CA796440051A5FD /* Text Experiment */ = {
@@ -113,6 +121,8 @@
 			isa = PBXGroup;
 			children = (
 				78739BD11CA78EB40051A5FD /* SpheresViewController.swift */,
+				786F03E31CAB7FB30048FC56 /* grid_1024.png */,
+				786F03E11CAB7FAE0048FC56 /* stars.png */,
 				78739BD51CA794C10051A5FD /* Spheres.scn */,
 			);
 			name = Spheres;
@@ -179,10 +189,10 @@
 			files = (
 				786A46F21A156AB100DDB37C /* LaunchScreen.xib in Resources */,
 				78739BD61CA794C10051A5FD /* Spheres.scn in Resources */,
-				781E49DA1CA8DD49003F1714 /* 0056.png in Resources */,
 				78C3BB0E1CA8C76F00A34569 /* waves.fsh in Resources */,
 				786A46EF1A156AB100DDB37C /* Images.xcassets in Resources */,
-				786A47081A156B5E00DDB37C /* design.rtf in Resources */,
+				786F03E41CAB7FB30048FC56 /* grid_1024.png in Resources */,
+				786F03E21CAB7FAE0048FC56 /* stars.png in Resources */,
 				780F31EA1A186DC000B686F0 /* cubes.dae in Resources */,
 				786A46ED1A156AB100DDB37C /* Main.storyboard in Resources */,
 				78E7D53B1CA8BE6C00C635C9 /* Experiment.sks in Resources */,

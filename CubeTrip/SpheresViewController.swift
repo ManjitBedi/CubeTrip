@@ -31,6 +31,8 @@ class SpheresViewController: UIViewController {
         
         // configure the view
         scnView.backgroundColor = UIColor.blackColor()
+        
+        scene.background.contents = ["Skybox_right1", "Skybox_left2", "Skybox_top3", "Skybox_bottom4", "Skybox_front5", "Skybox_back6"];
     }
 
 

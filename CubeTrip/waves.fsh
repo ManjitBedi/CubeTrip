@@ -1,3 +1,5 @@
+// Based on code from http://www.shadertoy.com.
+
 void main() {
     
     // use the uniform provided by iOS
