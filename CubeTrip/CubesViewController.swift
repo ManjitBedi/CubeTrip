@@ -1,5 +1,5 @@
 //
-//  GameViewController.swift
+//  CubesViewController.swift
 //  CubeTrip
 //
 //  Created by Manjit Bedi on 2014-11-13.
@@ -10,7 +10,7 @@ import UIKit
 import QuartzCore
 import SceneKit
 
-class GameViewController: UIViewController {
+class CubesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,9 +21,10 @@ class GameViewController: UIViewController {
         let cameraNode = SCNNode()
         cameraNode.camera = SCNCamera()
         scene.rootNode.addChildNode(cameraNode)
+        cameraNode.camera?.zFar = 400.0
         
         // place the camera a bit back from the cubes
-        cameraNode.position = SCNVector3(x: 0, y: 0, z: 90)
+        cameraNode.position = SCNVector3(x: 0, y: 0, z: 150)
         
         // create and add a light to the scene
         let lightNode = SCNNode()
@@ -40,7 +41,7 @@ class GameViewController: UIViewController {
         scene.rootNode.addChildNode(ambientLightNode)
         
         // retrieve the SCNView
-        let scnView = self.view as SCNView
+        let scnView = self.view as! SCNView
         
         // set the scene to the view
         scnView.scene = scene
@@ -67,11 +68,11 @@ class GameViewController: UIViewController {
         return true
     }
     
-    override func supportedInterfaceOrientations() -> Int {
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
         if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
-            return Int(UIInterfaceOrientationMask.AllButUpsideDown.rawValue)
+            return UIInterfaceOrientationMask.AllButUpsideDown
         } else {
-            return Int(UIInterfaceOrientationMask.All.rawValue)
+            return UIInterfaceOrientationMask.All
         }
     }
     
@@ -83,14 +84,14 @@ class GameViewController: UIViewController {
     // This code works but it needs more work to space and align the nodes properly.
     func createCubes(scene: SCNScene) {
         
-        var boxSize : CGFloat = 2.0;
-        var numShapes = 5
+        let boxSize : CGFloat = 2.0;
+        let numShapes = 5
         
         let myBox = SCNBox(width: boxSize, height: boxSize, length: 0.2, chamferRadius: 0)
-        var distanceFromOrigin : Float = (Float)((boxSize*6*5)/2)
+        let distanceFromOrigin : Float = (Float)((boxSize*6*5)/2)
         
         for count in 1...6 {
-            var nodeCollection = SCNNode()
+            let nodeCollection = SCNNode()
             
             switch count {
                 
@@ -121,7 +122,7 @@ class GameViewController: UIViewController {
             for x in 1...numShapes{
                 for y in 1...numShapes {
                     let node = SCNNode(geometry: myBox)
-                    var offset: Int8 = (Int8)(-distanceFromOrigin)
+                    let offset: Int8 = (Int8)(-distanceFromOrigin)
                     node.position = SCNVector3(x: Float(offset + x*6), y: Float(offset + y*6), z:0)
                     nodeCollection.addChildNode(node)
                 }
@@ -129,5 +130,17 @@ class GameViewController: UIViewController {
             
             scene.rootNode.addChildNode(nodeCollection)
         }
+        
+        let cubesScene: SCNScene = SCNScene(named:"cubes.dae")!
+        let node = SCNNode()
+
+        let nodeArray = cubesScene.rootNode.childNodes
+        
+        for child in nodeArray {
+            let childNode = child as SCNNode
+            childNode.position =  SCNVector3(x:  0, y:  0, z: -distanceFromOrigin)
+            node.addChildNode(childNode)
+        }
+        scene.rootNode.addChildNode(node)
     }
 }
