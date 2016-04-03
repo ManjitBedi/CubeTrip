@@ -18,7 +18,6 @@
 		78739BD21CA78EB40051A5FD /* SpheresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78739BD11CA78EB40051A5FD /* SpheresViewController.swift */; };
 		78739BD41CA78EDC0051A5FD /* SpriteKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78739BD31CA78EDC0051A5FD /* SpriteKitViewController.swift */; };
 		78739BD61CA794C10051A5FD /* Spheres.scn in Resources */ = {isa = PBXBuildFile; fileRef = 78739BD51CA794C10051A5FD /* Spheres.scn */; };
-		78739BD81CA794DB0051A5FD /* TextExperiment.sks in Resources */ = {isa = PBXBuildFile; fileRef = 78739BD71CA794DB0051A5FD /* TextExperiment.sks */; };
 		78739BDA1CA796100051A5FD /* ExperimentScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78739BD91CA796100051A5FD /* ExperimentScene.swift */; };
 		78C3BB0E1CA8C76F00A34569 /* waves.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 78C3BB0D1CA8C76F00A34569 /* waves.fsh */; };
 		78E7D53B1CA8BE6C00C635C9 /* Experiment.sks in Resources */ = {isa = PBXBuildFile; fileRef = 78E7D53A1CA8BE6C00C635C9 /* Experiment.sks */; };
@@ -39,7 +38,6 @@
 		78739BD11CA78EB40051A5FD /* SpheresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpheresViewController.swift; sourceTree = "<group>"; };
 		78739BD31CA78EDC0051A5FD /* SpriteKitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteKitViewController.swift; sourceTree = "<group>"; };
 		78739BD51CA794C10051A5FD /* Spheres.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Spheres.scn; sourceTree = "<group>"; };
-		78739BD71CA794DB0051A5FD /* TextExperiment.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TextExperiment.sks; sourceTree = "<group>"; };
 		78739BD91CA796100051A5FD /* ExperimentScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperimentScene.swift; sourceTree = "<group>"; };
 		78C3BB0D1CA8C76F00A34569 /* waves.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = waves.fsh; sourceTree = "<group>"; };
 		78E7D53A1CA8BE6C00C635C9 /* Experiment.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Experiment.sks; sourceTree = "<group>"; };
@@ -78,7 +76,7 @@
 			children = (
 				787080891CB0E507004B9DC7 /* Cubes & Squares */,
 				78739BDC1CA7965F0051A5FD /* Spheres */,
-				78739BDB1CA796440051A5FD /* Text Experiment */,
+				78739BDB1CA796440051A5FD /* Light Experiment */,
 				786A46E51A156AB100DDB37C /* AppDelegate.swift */,
 				786A46EB1A156AB100DDB37C /* Main.storyboard */,
 				786A46EE1A156AB100DDB37C /* Images.xcassets */,
@@ -105,16 +103,15 @@
 			name = "Cubes & Squares";
 			sourceTree = "<group>";
 		};
-		78739BDB1CA796440051A5FD /* Text Experiment */ = {
+		78739BDB1CA796440051A5FD /* Light Experiment */ = {
 			isa = PBXGroup;
 			children = (
 				78C3BB0D1CA8C76F00A34569 /* waves.fsh */,
 				78739BD31CA78EDC0051A5FD /* SpriteKitViewController.swift */,
 				78739BD91CA796100051A5FD /* ExperimentScene.swift */,
 				78E7D53A1CA8BE6C00C635C9 /* Experiment.sks */,
-				78739BD71CA794DB0051A5FD /* TextExperiment.sks */,
 			);
-			name = "Text Experiment";
+			name = "Light Experiment";
 			sourceTree = "<group>";
 		};
 		78739BDC1CA7965F0051A5FD /* Spheres */ = {
@@ -196,7 +193,6 @@
 				780F31EA1A186DC000B686F0 /* cubes.dae in Resources */,
 				786A46ED1A156AB100DDB37C /* Main.storyboard in Resources */,
 				78E7D53B1CA8BE6C00C635C9 /* Experiment.sks in Resources */,
-				78739BD81CA794DB0051A5FD /* TextExperiment.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
