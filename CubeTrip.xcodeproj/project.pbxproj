@@ -20,6 +20,7 @@
 		78739BD41CA78EDC0051A5FD /* SpriteKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78739BD31CA78EDC0051A5FD /* SpriteKitViewController.swift */; };
 		78739BD61CA794C10051A5FD /* Spheres.scn in Resources */ = {isa = PBXBuildFile; fileRef = 78739BD51CA794C10051A5FD /* Spheres.scn */; };
 		78739BDA1CA796100051A5FD /* ExperimentScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78739BD91CA796100051A5FD /* ExperimentScene.swift */; };
+		78BB84761CB883EC0072876A /* CameraAnimation.scn in Resources */ = {isa = PBXBuildFile; fileRef = 78BB84751CB883EC0072876A /* CameraAnimation.scn */; };
 		78C3BB0E1CA8C76F00A34569 /* waves.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 78C3BB0D1CA8C76F00A34569 /* waves.fsh */; };
 		78E7D53B1CA8BE6C00C635C9 /* Experiment.sks in Resources */ = {isa = PBXBuildFile; fileRef = 78E7D53A1CA8BE6C00C635C9 /* Experiment.sks */; };
 /* End PBXBuildFile section */
@@ -41,6 +42,7 @@
 		78739BD31CA78EDC0051A5FD /* SpriteKitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteKitViewController.swift; sourceTree = "<group>"; };
 		78739BD51CA794C10051A5FD /* Spheres.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Spheres.scn; sourceTree = "<group>"; };
 		78739BD91CA796100051A5FD /* ExperimentScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperimentScene.swift; sourceTree = "<group>"; };
+		78BB84751CB883EC0072876A /* CameraAnimation.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = CameraAnimation.scn; sourceTree = "<group>"; };
 		78C3BB0D1CA8C76F00A34569 /* waves.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = waves.fsh; sourceTree = "<group>"; };
 		78E7D53A1CA8BE6C00C635C9 /* Experiment.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Experiment.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				780724131CB878BB004DFB58 /* CameraTestViewController.swift */,
+				78BB84751CB883EC0072876A /* CameraAnimation.scn */,
 			);
 			name = "SceneKit Camera Animation";
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				786F03E21CAB7FAE0048FC56 /* stars.png in Resources */,
 				780F31EA1A186DC000B686F0 /* cubes.dae in Resources */,
 				786A46ED1A156AB100DDB37C /* Main.storyboard in Resources */,
+				78BB84761CB883EC0072876A /* CameraAnimation.scn in Resources */,
 				78E7D53B1CA8BE6C00C635C9 /* Experiment.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

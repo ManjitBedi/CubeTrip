@@ -6,7 +6,7 @@ This started out a experiment with using SceneKit to display some cubes; it is n
 Experimenting with Scene Kit, Sprite Kit and Swift. This is a proof of concept for some visual ideas.
 
 1) Cubes 
-Some shapes created in at run-time & some shapes read in from a DAE file
+Some shapes created in at run-time & some shapes read in from a DAE file.  It is kind of ropey to be perfectly honest.  😀
 
 2) Experimenting with multiple shapes & animating them.  Also using a Skybox.
 

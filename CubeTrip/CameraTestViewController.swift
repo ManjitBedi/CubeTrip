@@ -15,8 +15,8 @@ class CameraTestViewController: UIViewController {
         super.viewDidLoad()
         
         // create a new scene
-//        let scene = SCNScene(named: "Spheres.scn")!
-        let scene = SCNScene()
+        let scene = SCNScene(named: "CameraAnimation.scn")!
+
         
         // retrieve the SCNView
         let scnView = self.view as! SCNView
