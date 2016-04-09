@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		780724141CB878BB004DFB58 /* CameraTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780724131CB878BB004DFB58 /* CameraTestViewController.swift */; };
 		780F31EA1A186DC000B686F0 /* cubes.dae in Resources */ = {isa = PBXBuildFile; fileRef = 780F31E91A186DC000B686F0 /* cubes.dae */; settings = {ATTRIBUTES = ("--compress", ); }; };
 		786A46E61A156AB100DDB37C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786A46E51A156AB100DDB37C /* AppDelegate.swift */; };
 		786A46EA1A156AB100DDB37C /* CubesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786A46E91A156AB100DDB37C /* CubesViewController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		780724131CB878BB004DFB58 /* CameraTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraTestViewController.swift; sourceTree = "<group>"; };
 		780F31E91A186DC000B686F0 /* cubes.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = cubes.dae; sourceTree = "<group>"; };
 		786A46E01A156AB100DDB37C /* CubeTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CubeTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		786A46E41A156AB100DDB37C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +56,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		780724121CB87822004DFB58 /* SceneKit Camera Animation */ = {
+			isa = PBXGroup;
+			children = (
+				780724131CB878BB004DFB58 /* CameraTestViewController.swift */,
+			);
+			name = "SceneKit Camera Animation";
+			sourceTree = "<group>";
+		};
 		786A46D71A156AB100DDB37C = {
 			isa = PBXGroup;
 			children = (
@@ -74,9 +84,10 @@
 		786A46E21A156AB100DDB37C /* CubeTrip */ = {
 			isa = PBXGroup;
 			children = (
-				787080891CB0E507004B9DC7 /* Cubes & Squares */,
-				78739BDC1CA7965F0051A5FD /* Spheres */,
-				78739BDB1CA796440051A5FD /* Light Experiment */,
+				787080891CB0E507004B9DC7 /* SceneKit Cubes & Squares */,
+				78739BDC1CA7965F0051A5FD /* SceneKit Spheres */,
+				78739BDB1CA796440051A5FD /* SpriteKit Light Experiment */,
+				780724121CB87822004DFB58 /* SceneKit Camera Animation */,
 				786A46E51A156AB100DDB37C /* AppDelegate.swift */,
 				786A46EB1A156AB100DDB37C /* Main.storyboard */,
 				786A46EE1A156AB100DDB37C /* Images.xcassets */,
@@ -94,16 +105,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		787080891CB0E507004B9DC7 /* Cubes & Squares */ = {
+		787080891CB0E507004B9DC7 /* SceneKit Cubes & Squares */ = {
 			isa = PBXGroup;
 			children = (
 				780F31E91A186DC000B686F0 /* cubes.dae */,
 				786A46E91A156AB100DDB37C /* CubesViewController.swift */,
 			);
-			name = "Cubes & Squares";
+			name = "SceneKit Cubes & Squares";
 			sourceTree = "<group>";
 		};
-		78739BDB1CA796440051A5FD /* Light Experiment */ = {
+		78739BDB1CA796440051A5FD /* SpriteKit Light Experiment */ = {
 			isa = PBXGroup;
 			children = (
 				78C3BB0D1CA8C76F00A34569 /* waves.fsh */,
@@ -111,10 +122,10 @@
 				78739BD91CA796100051A5FD /* ExperimentScene.swift */,
 				78E7D53A1CA8BE6C00C635C9 /* Experiment.sks */,
 			);
-			name = "Light Experiment";
+			name = "SpriteKit Light Experiment";
 			sourceTree = "<group>";
 		};
-		78739BDC1CA7965F0051A5FD /* Spheres */ = {
+		78739BDC1CA7965F0051A5FD /* SceneKit Spheres */ = {
 			isa = PBXGroup;
 			children = (
 				78739BD11CA78EB40051A5FD /* SpheresViewController.swift */,
@@ -122,7 +133,7 @@
 				786F03E11CAB7FAE0048FC56 /* stars.png */,
 				78739BD51CA794C10051A5FD /* Spheres.scn */,
 			);
-			name = Spheres;
+			name = "SceneKit Spheres";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +219,7 @@
 				78739BD21CA78EB40051A5FD /* SpheresViewController.swift in Sources */,
 				78739BD41CA78EDC0051A5FD /* SpriteKitViewController.swift in Sources */,
 				786A46E61A156AB100DDB37C /* AppDelegate.swift in Sources */,
+				780724141CB878BB004DFB58 /* CameraTestViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
