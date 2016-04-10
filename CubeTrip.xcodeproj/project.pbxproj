@@ -20,6 +20,7 @@
 		78739BD41CA78EDC0051A5FD /* SpriteKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78739BD31CA78EDC0051A5FD /* SpriteKitViewController.swift */; };
 		78739BD61CA794C10051A5FD /* Spheres.scn in Resources */ = {isa = PBXBuildFile; fileRef = 78739BD51CA794C10051A5FD /* Spheres.scn */; };
 		78739BDA1CA796100051A5FD /* ExperimentScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78739BD91CA796100051A5FD /* ExperimentScene.swift */; };
+		78B00ADC1CB9C91E003BC81C /* nature.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 78B00ADB1CB9C91E003BC81C /* nature.scnassets */; };
 		78BB84761CB883EC0072876A /* CameraAnimation.scn in Resources */ = {isa = PBXBuildFile; fileRef = 78BB84751CB883EC0072876A /* CameraAnimation.scn */; };
 		78C3BB0E1CA8C76F00A34569 /* waves.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 78C3BB0D1CA8C76F00A34569 /* waves.fsh */; };
 		78E7D53B1CA8BE6C00C635C9 /* Experiment.sks in Resources */ = {isa = PBXBuildFile; fileRef = 78E7D53A1CA8BE6C00C635C9 /* Experiment.sks */; };
@@ -42,6 +43,7 @@
 		78739BD31CA78EDC0051A5FD /* SpriteKitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteKitViewController.swift; sourceTree = "<group>"; };
 		78739BD51CA794C10051A5FD /* Spheres.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Spheres.scn; sourceTree = "<group>"; };
 		78739BD91CA796100051A5FD /* ExperimentScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperimentScene.swift; sourceTree = "<group>"; };
+		78B00ADB1CB9C91E003BC81C /* nature.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = nature.scnassets; sourceTree = "<group>"; };
 		78BB84751CB883EC0072876A /* CameraAnimation.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = CameraAnimation.scn; sourceTree = "<group>"; };
 		78C3BB0D1CA8C76F00A34569 /* waves.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = waves.fsh; sourceTree = "<group>"; };
 		78E7D53A1CA8BE6C00C635C9 /* Experiment.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Experiment.sks; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 		786A46E21A156AB100DDB37C /* CubeTrip */ = {
 			isa = PBXGroup;
 			children = (
+				78B00ADB1CB9C91E003BC81C /* nature.scnassets */,
 				787080891CB0E507004B9DC7 /* SceneKit Cubes & Squares */,
 				78739BDC1CA7965F0051A5FD /* SceneKit Spheres */,
 				78739BDB1CA796440051A5FD /* SpriteKit Light Experiment */,
@@ -199,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				786A46F21A156AB100DDB37C /* LaunchScreen.xib in Resources */,
+				78B00ADC1CB9C91E003BC81C /* nature.scnassets in Resources */,
 				78739BD61CA794C10051A5FD /* Spheres.scn in Resources */,
 				78C3BB0E1CA8C76F00A34569 /* waves.fsh in Resources */,
 				786A46EF1A156AB100DDB37C /* Images.xcassets in Resources */,
@@ -334,6 +338,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CubeTrip/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.coldharbourmedia.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -345,6 +350,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CubeTrip/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.coldharbourmedia.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
