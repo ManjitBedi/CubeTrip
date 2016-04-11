@@ -52,15 +52,21 @@ class CameraTestViewController: UIViewController {
      This is interesting,  you can load a obj files from scene kit asset catalog.
      Does this mean the object has been convrted to a SceneKit scene?
      There is only one object in the scene so it is safe to jut get the
-     first objects attached to the root node.
-     
-     TODO: create nodes at different postions and attach a tree to each node.
-     
+     first objects attached to the root node?
     */
     func addTrees() {
         if let treeScene = SCNScene(named: "nature.scnassets/Tree_01.obj") {
-            print(treeScene)
-            self.scene?.rootNode.addChildNode(treeScene.rootNode.childNodes.first!)
+            print("tree scene \(treeScene) number of nodes \(treeScene.rootNode.childNodes.count)")
+            if let treeNode = treeScene.rootNode.childNodes.first {
+                for index in 1...10 {
+                    for index2 in 1...10 {
+                        let node = treeNode.clone()
+                        // in a line spaced out.
+                        node.position = SCNVector3Make(Float(index) * 5 - 10.0, 0, 2 * Float(index2) - 5.0)
+                        self.scene?.rootNode.addChildNode(node)
+                    }
+                }
+            }
         }
     }
     
