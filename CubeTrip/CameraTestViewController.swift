@@ -98,14 +98,26 @@ class CameraTestViewController: UIViewController {
             // the nodes are spaced out 3 units from each other in the
             // scn file.
             roadScn = SCNScene(named: "roads.scnassets/roadTile_015.obj"),
-            roadNode = roadScn.rootNode.childNodes.first
+            roadNode = roadScn.rootNode.childNodes.first,
+            cornerRoadScn = SCNScene(named: "roads.scnassets/roadTile_016.obj"),
+            cornerRoadNode = cornerRoadScn.rootNode.childNodes.first
+
         {
             scene.rootNode.enumerateChildNodesUsingBlock(){
                 node, stop in
-                if node.name  == "road" {
+                if node.name!.containsString("-x") {
                     print(node.position)
                     node.addChildNode(roadNode.clone())
+                } else if node.name!.containsString("-e-to-s") {
+                    print(node.position)
+                    node.rotation = SCNVector4Make(0, 1, 0, Float(M_PI))
+                    node.addChildNode(cornerRoadNode.clone())
+                } else if node.name!.containsString("-z") {
+                    print(node.position)
+                    node.rotation = SCNVector4Make(0, 1, 0, Float(M_PI_2))
+                    node.addChildNode(roadNode.clone())
                 }
+
                 stop[0] = false
             }
         }
