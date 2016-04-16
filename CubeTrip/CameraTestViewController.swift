@@ -9,6 +9,7 @@
 import UIKit
 import SceneKit
 import SceneKit.ModelIO
+import Darwin
 
 class CameraTestViewController: UIViewController {
 
@@ -55,12 +56,20 @@ class CameraTestViewController: UIViewController {
      first objects attached to the root node?
     */
     func addTrees() {
-        if let treeScene = SCNScene(named: "nature.scnassets/Tree_01.obj") {
+        if let treeScene = SCNScene(named: "nature.scnassets/Tree_01.obj"),
+           treeScene2 = SCNScene(named: "nature.scnassets/Oak_Green_01.obj") {
             print("tree scene \(treeScene) number of nodes \(treeScene.rootNode.childNodes.count)")
-            if let treeNode = treeScene.rootNode.childNodes.first {
+            if let treeNode = treeScene.rootNode.childNodes.first,
+                treeNode2 = treeScene2.rootNode.childNodes.first {
                 for index in 1...10 {
                     for index2 in 1...10 {
-                        let node = treeNode.clone()
+                        var node:SCNNode
+                        if arc4random_uniform(2) == 1 {
+                            node = treeNode2.clone()
+                        } else {
+                            node = treeNode.clone()
+                        }
+                        
                         // in a line spaced out.
                         node.position = SCNVector3Make(Float(index) * 5 - 10.0, 0, 2 * Float(index2) - 5.0)
                         self.scene?.rootNode.addChildNode(node)
