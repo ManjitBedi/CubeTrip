@@ -61,8 +61,8 @@ class CameraTestViewController: UIViewController {
             print("tree scene \(treeScene) number of nodes \(treeScene.rootNode.childNodes.count)")
             if let treeNode = treeScene.rootNode.childNodes.first,
                 treeNode2 = treeScene2.rootNode.childNodes.first {
-                for index in 1...10 {
-                    for index2 in 1...10 {
+                for index in 1...3 {
+                    for index2 in 1...4 {
                         var node:SCNNode
                         if arc4random_uniform(2) == 1 {
                             node = treeNode2.clone()
