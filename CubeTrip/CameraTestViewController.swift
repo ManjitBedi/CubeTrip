@@ -88,12 +88,15 @@ class CameraTestViewController: UIViewController {
     // this is making me think,
     // ideally, I would use some editor type app to paint the road & then import into the app
     // what I may try to do is add nodes in the SCN file based on the size of the
-    // objects that make up the road pieces.  the nodes would be tagged in a certian
+    // objects that make up the road pieces.  the nodes would be tagged in a certain
     // way or named such that a road tile 3d shape could be attached to the node...
     func addRoadToFun() {
         // get all the nodes named road & attach a road object to them.
         if let scene = self.scene,
             // this is a green patch with a dirt road (so I think)
+            // The road tile is 3 units long
+            // the nodes are spaced out 3 units from each other in the
+            // scn file.
             roadScn = SCNScene(named: "roads.scnassets/roadTile_015.obj"),
             roadNode = roadScn.rootNode.childNodes.first
         {
