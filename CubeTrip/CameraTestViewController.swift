@@ -35,7 +35,8 @@ class CameraTestViewController: UIViewController {
             // show statistics such as fps and timing information
             scnView.showsStatistics = true
             
-            self.addTrees()
+            addTrees()
+            addRoadToFun()
             
             // configure the view
             scnView.backgroundColor = UIColor.blackColor()
@@ -64,22 +65,50 @@ class CameraTestViewController: UIViewController {
                 for index in 1...3 {
                     for index2 in 1...4 {
                         var node:SCNNode
+                        var yOffset:Float
                         if arc4random_uniform(2) == 1 {
+                            yOffset = 0.0
                             node = treeNode2.clone()
                         } else {
+                            yOffset = 0.0
                             node = treeNode.clone()
                         }
                         
                         // in a line spaced out.
-                        node.position = SCNVector3Make(Float(index) * 5 - 10.0, 0, 2 * Float(index2) - 5.0)
+                        node.position = SCNVector3Make(Float(index) * 5 - 10.0, yOffset, 2 * Float(index2) - 5.0)
                         self.scene?.rootNode.addChildNode(node)
                     }
                 }
             }
         }
+        
     }
     
 
+    // this is making me think,
+    // ideally, I would use some editor type app to paint the road & then import into the app
+    // what I may try to do is add nodes in the SCN file based on the size of the
+    // objects that make up the road pieces.  the nodes would be tagged in a certian
+    // way or named such that a road tile 3d shape could be attached to the node...
+    func addRoadToFun() {
+        // get all the nodes named road & attach a road object to them.
+        if let scene = self.scene,
+            // this is a green patch with a dirt road (so I think)
+            roadScn = SCNScene(named: "roads.scnassets/roadTile_015.obj"),
+            roadNode = roadScn.rootNode.childNodes.first
+        {
+            scene.rootNode.enumerateChildNodesUsingBlock(){
+                node, stop in
+                if node.name  == "road" {
+                    print(node.position)
+                    node.addChildNode(roadNode.clone())
+                }
+                stop[0] = false
+            }
+        }
+    }
+
+    
     /*
     // MARK: - Navigation
 
