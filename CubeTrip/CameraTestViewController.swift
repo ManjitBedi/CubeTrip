@@ -14,6 +14,10 @@ import Darwin
 class CameraTestViewController: UIViewController {
 
     var scene: SCNScene?
+    var skyCamera: SCNNode!
+    var roadCamera: SCNNode!
+    
+    @IBOutlet weak var scnView: SCNView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +26,6 @@ class CameraTestViewController: UIViewController {
         
         if let scene = SCNScene(named: "CameraAnimation.scn") {
             self.scene = scene
-
-            // retrieve the SCNView
-            let scnView = self.view as! SCNView
             
             // set the scene to the view
             scnView.scene = self.scene
@@ -34,6 +35,9 @@ class CameraTestViewController: UIViewController {
             
             // show statistics such as fps and timing information
             scnView.showsStatistics = true
+            
+            self.skyCamera = self.scene!.rootNode.childNodeWithName("skyCamera", recursively: true)!
+            self.roadCamera = self.scene!.rootNode.childNodeWithName("roadCamera", recursively: true)!
             
             addTrees()
             addRoadToFun()
@@ -81,7 +85,6 @@ class CameraTestViewController: UIViewController {
                 }
             }
         }
-        
     }
     
 
@@ -123,6 +126,23 @@ class CameraTestViewController: UIViewController {
         }
     }
 
+    // MARK: - Actions
+    
+    @IBAction func actionSkyCamera(sender: AnyObject) {
+        scnView.pointOfView = skyCamera
+        scnView.allowsCameraControl = true
+    }
+    
+    @IBAction func actionRoadCamera(sender: AnyObject) {
+        scnView.pointOfView = roadCamera
+        scnView.allowsCameraControl = false
+    }
+    
+    @IBAction func actionGo(sender: AnyObject) {
+    }
+    
+    @IBAction func actionReset(sender: AnyObject) {
+    }
     
     /*
     // MARK: - Navigation
