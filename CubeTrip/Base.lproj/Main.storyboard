@@ -158,12 +158,13 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="2MU-As-m76"/>
-                                    <barButtonItem title="Go" id="DHK-V8-d9S">
+                                    <barButtonItem title="Move road camera" id="DHK-V8-d9S">
                                         <connections>
                                             <action selector="actionGo:" destination="stQ-Pl-qtU" id="2uu-KC-nOj"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Reset" id="Jt5-Bi-32p">
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="nrB-KV-8eO"/>
+                                    <barButtonItem title="Follow objects" id="Jt5-Bi-32p">
                                         <connections>
                                             <action selector="actionReset:" destination="stQ-Pl-qtU" id="7Lm-g3-Owj"/>
                                         </connections>

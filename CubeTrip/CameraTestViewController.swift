@@ -169,6 +169,46 @@ class CameraTestViewController: UIViewController {
     }
     
     @IBAction func actionReset(sender: AnyObject) {
+        if let scene = self.scene {
+            
+            scnView.pointOfView = roadCamera
+            
+            var actions: [SCNAction] = []
+            var cameraActions: [SCNAction] = []
+            
+            scene.rootNode.enumerateChildNodesUsingBlock(){
+                node, stop in
+                if node.name!.containsString("road") {
+                    var position = node.position
+                    
+                    position.x -= 0.5
+                    position.y += 2.0
+                    position.z -= 1.0
+                    
+                    let moveTo = SCNAction.moveTo(position, duration: 2.0)
+                    actions.append(moveTo)
+                    
+                    position.z -= 1.0
+                    position.y += 4.0
+                    let cameraMoveTo = SCNAction.moveTo(position, duration: 2.0)
+                    cameraActions.append(cameraMoveTo)
+                }
+                
+                stop[0] = false
+            }
+            
+            let targetNode = SCNLookAtConstraint(target: someObject)
+            targetNode.gimbalLockEnabled = true
+            roadCamera.constraints = [targetNode]
+            
+            let sequence = SCNAction.sequence(actions)
+            someObject.position = SCNVector3Make(-6.0, 1, -4.5)
+            someObject.runAction(sequence)
+            
+            let sequence2 = SCNAction.sequence(actions)
+            roadCamera.position = SCNVector3Make(-7.0, 1, -6.5)
+            roadCamera.runAction(sequence2)
+        }
     }
     
     /*

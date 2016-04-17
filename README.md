@@ -23,4 +23,4 @@ Some shapes created in at run-time & some shapes read in from a DAE file.  It is
 
 * set up way points (maybe just re-use the road nodes) & have the camera move along them
 
-* TODO: add some objects to the scene, have the camera move along the way points & track object
+* add some objects to the scene, have the camera move along the way points & track object
