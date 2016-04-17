@@ -16,6 +16,7 @@ class CameraTestViewController: UIViewController {
     var scene: SCNScene?
     var skyCamera: SCNNode!
     var roadCamera: SCNNode!
+    var someObject: SCNNode!
     
     @IBOutlet weak var scnView: SCNView!
     
@@ -38,6 +39,7 @@ class CameraTestViewController: UIViewController {
             
             self.skyCamera = self.scene!.rootNode.childNodeWithName("skyCamera", recursively: true)!
             self.roadCamera = self.scene!.rootNode.childNodeWithName("roadCamera", recursively: true)!
+            self.someObject = self.scene!.rootNode.childNodeWithName("someObject", recursively: true)!
             
             addTrees()
             addRoadToFun()
@@ -139,6 +141,31 @@ class CameraTestViewController: UIViewController {
     }
     
     @IBAction func actionGo(sender: AnyObject) {
+        if let scene = self.scene {
+            var actions:[SCNAction] = []
+            scene.rootNode.enumerateChildNodesUsingBlock(){
+                node, stop in
+                if node.name!.containsString("road") {
+                    var position = node.position
+                    position.y += 2.0
+                    let moveTo = SCNAction.moveTo(position, duration: 3.0)
+                    actions.append(moveTo)
+                }
+                
+                stop[0] = false
+            }
+            
+            //This is stopping the camera from moving...
+            //let targetNode = SCNLookAtConstraint(target: someObject)
+            //targetNode.gimbalLockEnabled = true
+            //roadCamera.constraints = [targetNode]
+            
+            // Point the camera East
+            roadCamera.rotation = SCNVector4Make(0, 1, 0, Float(-M_PI_2))
+
+            let sequence = SCNAction.sequence(actions)
+            roadCamera.runAction(sequence)
+        }
     }
     
     @IBAction func actionReset(sender: AnyObject) {

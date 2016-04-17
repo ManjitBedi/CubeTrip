@@ -18,9 +18,9 @@ Some shapes created in at run-time & some shapes read in from a DAE file.  It is
 
 4) Scene Kit - camera movement & object tracking
 
-* WIP: create a scene from placing nodes in a SCN file & then at run-time associate
+* create a scene from placing nodes in a SCN file & then at run-time associate
 .OBJ files for the road, terrain & trees
 
-* TODO: set up way points (maybe just re-use the road nodes) & have the camera move along them in a loop
+* set up way points (maybe just re-use the road nodes) & have the camera move along them
 
 * TODO: add some objects to the scene, have the camera move along the way points & track object
