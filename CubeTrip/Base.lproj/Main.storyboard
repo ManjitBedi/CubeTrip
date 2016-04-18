@@ -20,11 +20,11 @@
                                         <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iIB-Ia-xr7" id="t1A-M7-3F6">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="SceneKit: cubes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="akE-YE-iep">
-                                                    <rect key="frame" x="15" y="0.0" width="570" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -40,11 +40,11 @@
                                         <rect key="frame" x="0.0" y="108" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="is5-0C-cy5" id="yi1-s5-r6I">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="SceneKit: cube, sphere, skybox" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8rN-ht-dKg">
-                                                    <rect key="frame" x="15" y="0.0" width="570" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -60,11 +60,11 @@
                                         <rect key="frame" x="0.0" y="152" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8bB-FC-4df" id="snJ-bT-Is3">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="SpriteKit: light &amp; texture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ogl-qf-KMd">
-                                                    <rect key="frame" x="15" y="0.0" width="570" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -80,11 +80,11 @@
                                         <rect key="frame" x="0.0" y="196" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0WT-HH-U4v" id="TsU-i5-y93">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="SceneKit: Camera animation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lfC-v1-PP6">
-                                                    <rect key="frame" x="15" y="0.0" width="570" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -133,10 +133,63 @@
         <scene sceneID="89w-7U-thl">
             <objects>
                 <viewController id="stQ-Pl-qtU" customClass="CameraTestViewController" customModule="CubeTrip" customModuleProvider="target" sceneMemberID="viewController">
-                    <sceneKitView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" sceneName="" id="3dq-Hc-5MY">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mCe-Em-jil"/>
+                        <viewControllerLayoutGuide type="bottom" id="QEX-Bg-kgl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AWa-R6-7Hh">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </sceneKitView>
+                        <subviews>
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gma-dG-Wmr">
+                                <rect key="frame" x="0.0" y="4" width="600" height="532"/>
+                            </sceneKitView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RHh-PJ-TLV">
+                                <rect key="frame" x="0.0" y="492" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Sky Camera" id="Ck3-Iv-Syi">
+                                        <connections>
+                                            <action selector="actionSkyCamera:" destination="stQ-Pl-qtU" id="hHp-US-qik"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Road Camera" id="PmM-sz-pwn">
+                                        <connections>
+                                            <action selector="actionRoadCamera:" destination="stQ-Pl-qtU" id="Mu9-rv-ZJ9"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="2MU-As-m76"/>
+                                    <barButtonItem title="Move road camera" id="DHK-V8-d9S">
+                                        <connections>
+                                            <action selector="actionMoveCameraAlongRoad:" destination="stQ-Pl-qtU" id="lqA-YD-Xrx"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="nrB-KV-8eO"/>
+                                    <barButtonItem title="Follow objects" id="Jt5-Bi-32p">
+                                        <connections>
+                                            <action selector="actionMoveObjectAlongRoad:" destination="stQ-Pl-qtU" id="vr2-RJ-xST"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Gma-dG-Wmr" firstAttribute="top" secondItem="mCe-Em-jil" secondAttribute="bottom" constant="4" id="BbT-j2-AHr"/>
+                            <constraint firstItem="RHh-PJ-TLV" firstAttribute="leading" secondItem="AWa-R6-7Hh" secondAttribute="leading" id="RPc-9Y-GWo"/>
+                            <constraint firstAttribute="trailing" secondItem="Gma-dG-Wmr" secondAttribute="trailing" id="SkO-X7-AaG"/>
+                            <constraint firstItem="QEX-Bg-kgl" firstAttribute="top" secondItem="Gma-dG-Wmr" secondAttribute="bottom" id="gZO-Sz-lde"/>
+                            <constraint firstItem="Gma-dG-Wmr" firstAttribute="leading" secondItem="AWa-R6-7Hh" secondAttribute="leading" id="qoI-bx-HHS"/>
+                            <constraint firstItem="QEX-Bg-kgl" firstAttribute="top" secondItem="RHh-PJ-TLV" secondAttribute="bottom" id="t3b-nm-7eW"/>
+                            <constraint firstAttribute="trailing" secondItem="RHh-PJ-TLV" secondAttribute="trailing" id="yUl-Uq-prO"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="scnView" destination="Gma-dG-Wmr" id="LRJ-eU-al2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fjF-JQ-obA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
