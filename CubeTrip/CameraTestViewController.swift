@@ -11,6 +11,7 @@ import SceneKit
 import SceneKit.ModelIO
 import Darwin
 
+
 class CameraTestViewController: UIViewController {
 
     var scene: SCNScene?
@@ -76,12 +77,19 @@ class CameraTestViewController: UIViewController {
                             yOffset = 0.0
                             node = treeNode2.clone()
                         } else {
-                            yOffset = 0.0
+                            yOffset = 0.3
                             node = treeNode.clone()
                         }
                         
                         // in a line spaced out.
-                        node.position = SCNVector3Make(Float(index) * 5 - 10.0, yOffset, 2 * Float(index2) - 5.0)
+                        node.position = SCNVector3Make(Float(index) * 4 - 8.0, yOffset, 2 * Float(index2) - 1.0)
+                        
+                        // apply some random scaling to the height of the trees
+                        let lowerBound = 5
+                        let upperBound = 15
+                        let rndValue = Float(lowerBound + Int(arc4random()) % (upperBound - lowerBound))/10.0
+                        
+                        node.scale = SCNVector3Make(1, rndValue , 1)
                         self.scene?.rootNode.addChildNode(node)
                     }
                 }
@@ -90,20 +98,22 @@ class CameraTestViewController: UIViewController {
     }
     
 
-    // this is making me think,
-    // ideally, I would use some editor type app to paint the road & then import into the app
-    // what I may try to do is add nodes in the SCN file based on the size of the
-    // objects that make up the road pieces.  the nodes would be tagged in a certain
-    // way or named such that a road tile 3d shape could be attached to the node...
+    // This is making me think:
+    // Ideally, I would use an editor to paint the road & then import the data into the app.
+    // I am using a SCN file created in Xcode; the nodes are added manully 1 by 1 into the scene file.
+    // The nodes all contain the string "road" to make them searchable in the SCN file.
     func addRoadToFun() {
         // get all the nodes named road & attach a road object to them.
         if let scene = self.scene,
-            // this is a green patch with a dirt road (so I think)
+
             // The road tile is 3 units long
-            // the nodes are spaced out 3 units from each other in the
-            // scn file.
+            // the nodes are spaced out 3 units from each other in the scn file.
+            
+            // this is a  dirt road tile
             roadScn = SCNScene(named: "roads.scnassets/roadTile_015.obj"),
             roadNode = roadScn.rootNode.childNodes.first,
+            
+            // This is corner dirt road tile
             cornerRoadScn = SCNScene(named: "roads.scnassets/roadTile_016.obj"),
             cornerRoadNode = cornerRoadScn.rootNode.childNodes.first
 
@@ -140,7 +150,10 @@ class CameraTestViewController: UIViewController {
         scnView.allowsCameraControl = false
     }
     
-    @IBAction func actionGo(sender: AnyObject) {
+    
+    // Move the road camera node along the nodes that represent the road.
+    // In the SCN file, the road nodes contain the string "road"
+    @IBAction func actionMoveCameraAlongRoad(sender: AnyObject) {
         if let scene = self.scene {
             var actions:[SCNAction] = []
             scene.rootNode.enumerateChildNodesUsingBlock(){
@@ -168,7 +181,11 @@ class CameraTestViewController: UIViewController {
         }
     }
     
-    @IBAction func actionReset(sender: AnyObject) {
+    // Animate the "some object" node along the road nodes and hae the road
+    // camera node track the object.  Ideally, I want the camera object
+    // to move with the node.
+    
+    @IBAction func actionMoveObjectAlongRoad(sender: AnyObject) {
         if let scene = self.scene {
             
             scnView.pointOfView = roadCamera
