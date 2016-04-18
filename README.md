@@ -34,8 +34,6 @@ http://kenney.nl/assets/3d-road-tiles
 
 Note: this first pass was a good result but it is not very maintainable.  Things to do differently.
 
-* Use shape primtives for the objects that specify the node for the road in the SCN file - to be able to see
-them!
+* Use shape primtives for the objects that specify the node for the road in the SCN file - to be able to see them!
 * change the way the 3D objects are attached to nodes;  I should check how anchor points work in this context.  When rotating the objects;  it seems they are being rotated from a corner & not the centre of the object.
-
 * There is a problem with the tree & road meshes having the materials turn on & off.  What am I missing?
