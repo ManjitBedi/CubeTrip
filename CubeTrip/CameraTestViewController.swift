@@ -18,6 +18,7 @@ class CameraTestViewController: UIViewController {
     var skyCamera: SCNNode!
     var roadCamera: SCNNode!
     var someObject: SCNNode!
+    var secondObject: SCNNode!
     
     @IBOutlet weak var scnView: SCNView!
     
@@ -41,6 +42,7 @@ class CameraTestViewController: UIViewController {
             self.skyCamera = self.scene!.rootNode.childNodeWithName("skyCamera", recursively: true)!
             self.roadCamera = self.scene!.rootNode.childNodeWithName("roadCamera", recursively: true)!
             self.someObject = self.scene!.rootNode.childNodeWithName("someObject", recursively: true)!
+            self.secondObject = self.scene!.rootNode.childNodeWithName("smallBox", recursively: true)!
             
             addTrees()
             addRoadToFun()
@@ -168,11 +170,6 @@ class CameraTestViewController: UIViewController {
                 stop[0] = false
             }
             
-            //This is stopping the camera from moving...
-            //let targetNode = SCNLookAtConstraint(target: someObject)
-            //targetNode.gimbalLockEnabled = true
-            //roadCamera.constraints = [targetNode]
-            
             // Point the camera East
             roadCamera.rotation = SCNVector4Make(0, 1, 0, Float(-M_PI_2))
 
@@ -214,9 +211,8 @@ class CameraTestViewController: UIViewController {
                 stop[0] = false
             }
             
-            let targetNode = SCNLookAtConstraint(target: someObject)
-            targetNode.gimbalLockEnabled = true
-            roadCamera.constraints = [targetNode]
+            let targetNodeConstraint = SCNLookAtConstraint(target: someObject)
+            targetNodeConstraint.gimbalLockEnabled = true
             
             let sequence = SCNAction.sequence(actions)
             someObject.position = SCNVector3Make(-6.0, 1, -4.5)
@@ -225,6 +221,15 @@ class CameraTestViewController: UIViewController {
             let sequence2 = SCNAction.sequence(actions)
             roadCamera.position = SCNVector3Make(-7.0, 1, -6.5)
             roadCamera.runAction(sequence2)
+            
+            let followObjectConstraint = SCNTransformConstraint(inWorldSpace: true, withBlock: { (node, matrix) -> SCNMatrix4 in
+                let transformMatrix = SCNMatrix4MakeTranslation( self.someObject.position.x - 0.5, self.someObject.position.y + 0.0, self.someObject.position.z - 0.4)
+                let scaleMatrix =  SCNMatrix4Scale (transformMatrix, 0.2, 0.2, 0.2)
+                return scaleMatrix
+            })
+            
+            roadCamera.constraints = [targetNodeConstraint]
+            secondObject.constraints = [followObjectConstraint]
         }
     }
     
