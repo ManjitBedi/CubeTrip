@@ -27,8 +27,9 @@ Note: ideally, the light node would be tied to the movement of the light wave in
 .OBJ files for the road, terrain & trees
 
 * a path is created by using the road nodes in the SCN file.
-* added some objects to the scene, have the camera move along the way points & track object
-* the road & nature objects are from a really handy set of collections
+* added some objects to the scene
+* there are 2 cameras
+* the road & nature objects are from a public domain collection of 3D assets (donations welcome)
 
 http://kenney.nl/assets/3d-road-tiles
 
@@ -37,3 +38,6 @@ Note: this first pass was a good result but it is not very maintainable.  Things
 * Use shape primtives for the objects that specify the node for the road in the SCN file - to be able to see them!
 * change the way the 3D objects are attached to nodes;  I should check how anchor points work in this context.  When rotating the objects;  it seems they are being rotated from a corner & not the centre of the object.
 * There is a problem with the tree & road meshes having the materials turn on & off.  What am I missing?
+
+It took some thinking & experimenting; I got a camera to move with a node & follow the object using scene constraints.
+

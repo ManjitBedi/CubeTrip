@@ -223,13 +223,21 @@ class CameraTestViewController: UIViewController {
             roadCamera.runAction(sequence2)
             
             let followObjectConstraint = SCNTransformConstraint(inWorldSpace: true, withBlock: { (node, matrix) -> SCNMatrix4 in
-                let transformMatrix = SCNMatrix4MakeTranslation( self.someObject.position.x - 0.5, self.someObject.position.y + 0.0, self.someObject.position.z - 0.4)
+                let transformMatrix = SCNMatrix4MakeTranslation( self.someObject.position.x - 1.0, self.someObject.position.y, self.someObject.position.z + 1.0)
                 let scaleMatrix =  SCNMatrix4Scale (transformMatrix, 0.2, 0.2, 0.2)
                 return scaleMatrix
             })
             
-            roadCamera.constraints = [targetNodeConstraint]
-            secondObject.constraints = [followObjectConstraint]
+            
+            // Position the object behind the other object & rotate it to face east
+            let followObjectConstraint2 = SCNTransformConstraint(inWorldSpace: true, withBlock: { (node, matrix) -> SCNMatrix4 in
+                let transformMatrix = SCNMatrix4MakeTranslation( self.someObject.position.x - 0.4, self.someObject.position.y, self.someObject.position.z)
+                let scaleMatrix =  SCNMatrix4Scale (transformMatrix, 0.2, 0.2, 0.2)
+                return scaleMatrix
+            })
+            
+            roadCamera.constraints = [followObjectConstraint, targetNodeConstraint]
+            secondObject.constraints = [followObjectConstraint2]
         }
     }
     
