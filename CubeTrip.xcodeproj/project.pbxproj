@@ -24,6 +24,9 @@
 		78B00ADC1CB9C91E003BC81C /* nature.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 78B00ADB1CB9C91E003BC81C /* nature.scnassets */; };
 		78BB84761CB883EC0072876A /* CameraAnimation.scn in Resources */ = {isa = PBXBuildFile; fileRef = 78BB84751CB883EC0072876A /* CameraAnimation.scn */; };
 		78C3BB0E1CA8C76F00A34569 /* waves.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 78C3BB0D1CA8C76F00A34569 /* waves.fsh */; };
+		78C908291D29AA3C00FF61B7 /* MultiplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C908281D29AA3C00FF61B7 /* MultiplesViewController.swift */; };
+		78C9082B1D29AA7800FF61B7 /* Multiples.scn in Resources */ = {isa = PBXBuildFile; fileRef = 78C9082A1D29AA7800FF61B7 /* Multiples.scn */; };
+		78DDE6F61D29BCBA0033E68A /* multiples.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 78DDE6F51D29BCBA0033E68A /* multiples.scnassets */; };
 		78E7D53B1CA8BE6C00C635C9 /* Experiment.sks in Resources */ = {isa = PBXBuildFile; fileRef = 78E7D53A1CA8BE6C00C635C9 /* Experiment.sks */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +51,9 @@
 		78B00ADB1CB9C91E003BC81C /* nature.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = nature.scnassets; sourceTree = "<group>"; };
 		78BB84751CB883EC0072876A /* CameraAnimation.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = CameraAnimation.scn; sourceTree = "<group>"; };
 		78C3BB0D1CA8C76F00A34569 /* waves.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = waves.fsh; sourceTree = "<group>"; };
+		78C908281D29AA3C00FF61B7 /* MultiplesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiplesViewController.swift; sourceTree = "<group>"; };
+		78C9082A1D29AA7800FF61B7 /* Multiples.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Multiples.scn; sourceTree = "<group>"; };
+		78DDE6F51D29BCBA0033E68A /* multiples.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = multiples.scnassets; sourceTree = "<group>"; };
 		78E7D53A1CA8BE6C00C635C9 /* Experiment.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Experiment.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +103,7 @@
 				78739BDC1CA7965F0051A5FD /* SceneKit Spheres */,
 				78739BDB1CA796440051A5FD /* SpriteKit Light Experiment */,
 				780724121CB87822004DFB58 /* SceneKit Camera Animation */,
+				78C908271D29A9CA00FF61B7 /* Scene Kit Multiples */,
 				786A46E51A156AB100DDB37C /* AppDelegate.swift */,
 				786A46EB1A156AB100DDB37C /* Main.storyboard */,
 				786A46EE1A156AB100DDB37C /* Images.xcassets */,
@@ -143,6 +150,16 @@
 				78739BD51CA794C10051A5FD /* Spheres.scn */,
 			);
 			name = "SceneKit Spheres";
+			sourceTree = "<group>";
+		};
+		78C908271D29A9CA00FF61B7 /* Scene Kit Multiples */ = {
+			isa = PBXGroup;
+			children = (
+				78DDE6F51D29BCBA0033E68A /* multiples.scnassets */,
+				78C908281D29AA3C00FF61B7 /* MultiplesViewController.swift */,
+				78C9082A1D29AA7800FF61B7 /* Multiples.scn */,
+			);
+			name = "Scene Kit Multiples";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				786A46F21A156AB100DDB37C /* LaunchScreen.xib in Resources */,
+				78DDE6F61D29BCBA0033E68A /* multiples.scnassets in Resources */,
 				78B00ADC1CB9C91E003BC81C /* nature.scnassets in Resources */,
 				78739BD61CA794C10051A5FD /* Spheres.scn in Resources */,
 				78C3BB0E1CA8C76F00A34569 /* waves.fsh in Resources */,
@@ -216,6 +234,7 @@
 				780F31EA1A186DC000B686F0 /* cubes.dae in Resources */,
 				786A46ED1A156AB100DDB37C /* Main.storyboard in Resources */,
 				78BB84761CB883EC0072876A /* CameraAnimation.scn in Resources */,
+				78C9082B1D29AA7800FF61B7 /* Multiples.scn in Resources */,
 				78E7D53B1CA8BE6C00C635C9 /* Experiment.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,6 +251,7 @@
 				78739BD21CA78EB40051A5FD /* SpheresViewController.swift in Sources */,
 				78739BD41CA78EDC0051A5FD /* SpriteKitViewController.swift in Sources */,
 				786A46E61A156AB100DDB37C /* AppDelegate.swift in Sources */,
+				78C908291D29AA3C00FF61B7 /* MultiplesViewController.swift in Sources */,
 				780724141CB878BB004DFB58 /* CameraTestViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

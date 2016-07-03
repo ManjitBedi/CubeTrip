@@ -41,3 +41,7 @@ Note: this first pass was a good result but it is not very maintainable.  Things
 
 It took some thinking & experimenting; I got a camera to move with a node & follow the object using scene constraints.
 
+5) A new experiment.
+
+I am using a skybox referenced in a scene file.
+
